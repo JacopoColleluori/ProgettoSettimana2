@@ -1,0 +1,458 @@
+/* IMPOSTAZIONI GENERALI */
+body {
+    color: #000;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+hr {
+    display: none;
+}
+
+/* HEADER */
+header {
+    background-color: white;
+    box-shadow: 2px 2px 2px #d3d3d3;
+    text-align: right;
+    position: sticky;
+    top: 0;
+    padding: 1em;
+}
+
+header img {
+    float: left;
+}
+
+header ul a button {
+    font-size: 100%
+}
+
+header ul a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding-right: 0.8rem;
+}
+
+/* MAIN */
+main :not(#banner) :not(img) {
+    padding: 1rem;
+}
+
+i {
+    color: red;
+}
+
+h1 {
+    font-size: 4rem;
+    padding-bottom: 1em;
+
+}
+
+h2 {
+    font-size: 3.5rem;
+    padding: 1rem 0rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+    padding: 1em 0em;
+    line-height: 1em;
+}
+
+button {
+    color: white;
+    background-image: linear-gradient(to right, #6cc1e2, #392f7a);
+    font-size: 1.9rem;
+    padding: 0.3em;
+
+}
+
+#photos img {
+    padding: 2em 0em;
+}
+
+
+
+/* ID*/
+#banner {
+    background-image: url(../images/banner.jpg);
+    color: white;
+    padding: 3em;
+    text-align: left;
+    background-position: center;
+    background-size: cover;
+    text-shadow: 1px 1px 1px rgb(46, 43, 43);
+}
+
+#tableDesktop tbody {
+    width: 100%;
+}
+
+#tableDesktop th {
+    color: white;
+    background-color: rgb(34, 98, 238);
+}
+
+#developer_oggi {
+    background-color: #0c0633;
+    color: white;
+    padding: 3em;
+    margin: 2em 0em;
+}
+
+#goalsbox {
+    display: flex;
+    flex-basis: 25%;
+}
+
+#goalsbox div {
+    padding: 0.5em;
+}
+
+#goalsbox div p {
+    text-align: left;
+}
+
+#motivation {
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    grid-template-rows: 50% 50%;
+}
+
+#motivation img {
+    grid-row: 1/4;
+}
+
+#motivation div {
+    padding-left: 1em;
+    text-align: left;
+}
+
+#flexcontatti {
+    display: grid;
+    grid-template-columns: 58% 42%;
+    padding-bottom: 6em;
+
+}
+
+#flexcontatti div p, a, address {
+    font-size: 70%;
+}
+
+#flexcontatti div:nth-of-type(1) {
+    grid-row: 1/3;
+}
+
+#flexcontatti div:nth-of-type(3) {
+    padding-top: 1em;
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+
+#flexcontatti button {
+    font-size: 1.2rem;
+}
+
+#flexcontatti textarea {
+
+    margin-top: 1em;
+}
+
+#photosflex {
+    display: flex;
+    flex-basis: 50%;
+}
+
+
+/* ANIMATIOM*/
+@keyframes pulsing {
+    0% {
+        box-shadow: 0 0 #000;
+    }
+
+    50% {
+        box-shadow: 0 0 #000;
+    }
+
+    100% {
+        box-shadow: 0 0 5px 5px rgb(92, 91, 91);
+    }
+}
+
+@keyframes tendina {
+    0% {
+        transform: translateY();
+    }
+
+    50% {
+        transform: translateY();
+    }
+
+    100% {
+        transform: translateY();
+    }
+
+}
+
+/* CLASSI */
+.buttonAnim {
+    animation-name: pulsing;
+    animation-duration: 2s;
+    animation-direction: linear;
+    animation-iteration-count: infinite;
+}
+
+.formstyling {
+    box-sizing: content-box;
+    padding: 0.5em 1em;
+    margin-bottom: 1em;
+    width: 60%;
+    box-shadow: 0 0 2px rgb(88, 88, 88);
+    border-style: none;
+    border-radius: 1%;
+    font-size: 1rem;
+}
+
+.colorlightblue {
+    background-color: rgb(147, 173, 185);
+}
+
+/* FOOTER */
+footer {
+    background-color: rgb(238, 238, 238);
+    padding: 3em;
+}
+
+footer section {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+footer section div {
+    padding: 0.5em;
+}
+
+h4 {
+    font-size: 2rem;
+    padding-bottom: 2rem;
+    line-height: 1;
+
+}
+
+footer form {
+    display: flex;
+    flex-direction: column;
+}
+
+footer form input {
+    font-size: 1.9rem;
+    padding: 0.3em 1em;
+}
+
+footer i {
+    font-size: 2em;
+    padding-bottom: 1em;
+}
+
+footer address {
+    font-size: 70%;
+    padding: 3em 0em;
+}
+
+/* RESPONSIVE */
+
+/*SMARTPHONE*/
+@media screen and (max-width: 617px) {
+
+    /* HEADER*/
+    #menuButt {
+        display: none;
+    }
+
+    header img {
+        padding-left: 1em;
+    }
+
+    header nav a {
+        color: red;
+        text-align: left;
+    }  
+    header nav ul {
+        display: none;
+    
+        
+    }
+   
+    #menuButt:checked ~ nav ul {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+    }
+
+
+    /* MAIN */
+    #tableDesktop {
+        display: none;
+    }
+
+    /*ID CLASSI */
+
+    #goalsbox {
+        display: contents;
+    }
+
+    #goalsbox div p {
+        text-align: center;
+    }
+
+    #motivation {
+        display: contents;
+    }
+
+    #motivation div p {
+        text-align: center;
+    }
+
+    #flexcontatti {
+        display: contents;
+    }
+
+    #photosflex {
+        display: contents;
+    }
+
+    table th {
+        font-weight: bold;
+        width: 45%;
+    }
+
+    table {
+        margin: 1em;
+        text-align: left;
+    }
+
+    table, tr, td {
+        border: none;
+    }
+
+    /* FOOTER */
+    footer section {
+        display: contents;
+    }
+}
+
+/* TABLET */
+@media screen and (min-width:617px) and (max-width:992px) {
+
+    /* MAIN  */
+    #motivation h3 {
+        text-align: left;
+    }
+
+    #tableMobile {
+        display: none;
+    }
+
+    #tableDesktop {
+        margin: 1em;
+    }
+
+    /*ID CLASSI TABLET*/
+    #banner {
+        padding: 2em 4em;
+    }
+
+    #menuButt, #menuMobile {
+        display: none;
+    }
+
+    #goalsbox {
+        font-size: 70%;
+    }
+
+    #goalsbox h3 {
+        font-size: 2rem;
+    }
+
+    #motivation div {
+        font-size: 70%;
+    }
+
+    #motivation div h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* DESKTOP */
+@media screen and (min-width:992px) {
+
+    /* HEADER*/
+    header nav {
+        padding-right: 8em;
+    }
+
+    header img {
+        padding-left: 8em;
+    }
+
+    /* MAIN  */
+
+    #tableDesktop {
+        margin: 2em 10em 2em 6em;
+    }
+
+    #tableMobile {
+        display: none;
+    }
+
+    #motivation {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    #motivation h3 {
+        text-align: left;
+        font-size: 2rem;
+    }
+
+    #motivation div {
+        padding-left: 3em;
+        font-size: 90%;
+        grid-column: 4/6;
+    }
+
+    #motivation img {
+        grid-column: 2/4;
+    }
+
+    #goalsbox+hr {
+        display: block;
+        background-color: black;
+        height: 2px;
+    }
+
+    /*ID CLASSI DESKTOP*/
+    #banner div {
+        padding: 0em 10em;
+    }
+
+    #menuButt, #menuMobile {
+        display: none;
+    }
+
+    /* FOOTER */
+    footer {
+        padding: 3em 8em;
+        font-size: 70%;
+    }
+
+    footer section div {
+        padding: 0em 2em;
+    }
+
+    footer h4 {
+        font-size: 2rem;
+    }
+
+}
